@@ -156,6 +156,7 @@ module RubyXL
     end
 
     def modify_fill(style_index, rgb)
+      style_index ||= 0
       xf = cell_xfs[style_index].dup
       new_fill = RubyXL::Fill.new(:pattern_fill =>
                    RubyXL::PatternFill.new(:pattern_type => 'solid',
